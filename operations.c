@@ -6,47 +6,55 @@
 /*   By: ddantas- <ddantas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 07:40:04 by  ddantas-         #+#    #+#             */
-/*   Updated: 2023/01/30 15:56:54 by ddantas-         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:18:13 by ddantas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_ps_list	*sa(t_ps_list	*alst, int ss)
+int	sa(t_ps_list	*alst, int ss)
 {
 	int		n_temp;
+	int		c = 0;
 
 	if (alst == NULL || alst->next == NULL)
 		return (alst);
 	if (ss == 0)
+	{
+		c++;
 		ft_printf("sa\n");
+	}
 	if (alst != NULL && alst->next != NULL)
 	{
 		n_temp = alst->next->data;
 		alst->next->data = alst->data;
 		alst->data = n_temp;
 	}
-	return (alst);
+	return (c);
 }
 
-t_ps_list	*sb(t_ps_list *blst, int ss)
+int	sb(t_ps_list *blst, int ss)
 {
 	int		n_temp;
+	int		c = 0;
 
 	if (blst == NULL || blst->next == NULL)
 		return (blst);
 	if (ss == 0)
+	{
+		c++;
 		ft_printf("sb\n");
+	}
 	if (blst != NULL && blst->next != NULL)
 	{
 		n_temp = blst->next->data;
 		blst->next->data = blst->data;
 		blst->data = n_temp;
 	}
-	return (blst);
+	return (c);
 }
 
-void	pa(t_ps_list **blst, t_ps_list **alst)
+int	pa(t_ps_list **blst, t_ps_list **alst)
 {
 	t_ps_list	*temp;
 
@@ -67,9 +75,10 @@ void	pa(t_ps_list **blst, t_ps_list **alst)
 		(*alst)->next = temp;
 	}
 	ft_printf("pa\n");
+	return (1);
 }
 
-void	pb(t_ps_list **blst, t_ps_list **alst)
+int	pb(t_ps_list **blst, t_ps_list **alst)
 {
 	t_ps_list	*temp;
 
@@ -90,4 +99,5 @@ void	pb(t_ps_list **blst, t_ps_list **alst)
 		(*blst)->next = temp;
 	}
 	ft_printf("pb\n");
+	return (1);
 }

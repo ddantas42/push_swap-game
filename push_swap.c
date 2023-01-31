@@ -6,7 +6,7 @@
 /*   By: ddantas- <ddantas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:47:35 by ddantas-          #+#    #+#             */
-/*   Updated: 2023/01/30 17:40:27 by ddantas-         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:34:18 by ddantas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,26 +37,28 @@ void	print_list_b(t_ps_list *lst)
 	ft_printf("_\n\n");
 }
 
-t_ps_list	*ss(t_ps_list *alst, t_ps_list *blst)
+int	ss(t_ps_list *alst, t_ps_list *blst)
 {
-	alst = sa(alst, 1);
-	blst = sb(blst, 1);
+	sa(alst, 1);
+	sb(blst, 1);
 	ft_printf("ss\n");
-	return (0);
+	return (1);
 }
 
-void	rr(t_ps_list **alst, t_ps_list **blst)
+int	rr(t_ps_list **alst, t_ps_list **blst)
 {
 	ra(alst, 1);
 	rb(blst, 1);
 	ft_printf("rr\n");
+	return (1);
 }
 
-void	rrr(t_ps_list **alst, t_ps_list **blst)
+int	rrr(t_ps_list **alst, t_ps_list **blst)
 {
 	rra(alst, 1);
 	rrb(blst, 1);
 	ft_printf("rrr\n");
+	return (1);
 }
 
 int	main(int argc, char **argv)
@@ -71,36 +73,40 @@ int	main(int argc, char **argv)
 	if (!stack_a)
 		free_stuff(alst, stack_a, 0, 1);	
 	protection(&alst, stack_a, argc, argv);
+		system("clear"); ft_printf("1  2  3  4  5  6  7  8   9   10  11\npa pb sa sb ss ra rb rr rra rrb rrr\n");
 	print_list_a(alst);
-	int	c;	scanf("%d", &c);
-	while (c)
+	int	n;	scanf("%d", &n);
+	int commands = 0;
+	while (n)
 	{
 		system("clear"); ft_printf("1  2  3  4  5  6  7  8   9   10  11\npa pb sa sb ss ra rb rr rra rrb rrr\n");
-		if (c == 1)
-			pa(&blst, &alst);
-		if (c == 2)
-			pb(&blst, &alst);
-		if (c == 3)
-			sa(alst, 0);
-		if (c == 4)
-			sb(blst, 0);
-		if (c == 5)
-			ss(alst, blst);		
-		if (c == 6)
-			ra(&alst, 0);
-		if (c == 7)
-			rb(&blst, 0);
-		if (c == 8)
-			rr(&alst, &blst);
-		if (c == 9)
-			rra(&alst, 0);
-		if (c == 10)
-			rrb(&blst, 0);
-		if (c == 11)
-			rrr(&alst, &blst);
+		if (n == 1)
+			commands += pa(&blst, &alst);
+		if (n == 2)
+			commands += pb(&blst, &alst);
+		if (n == 3)
+			commands += sa(alst, 0);
+		if (n == 4)
+			commands += sb(blst, 0);
+		if (n == 5)
+			commands += ss(alst, blst);		
+		if (n == 6)
+			commands += ra(&alst, 0);
+		if (n == 7)
+			commands += rb(&blst, 0);
+		if (n == 8)
+			commands += rr(&alst, &blst);
+		if (n == 9)
+			commands += rra(&alst, 0);
+		if (n == 10)
+			commands += rrb(&blst, 0);
+		if (n == 11)
+			commands += rrr(&alst, &blst);
 		print_list_a(alst);
 		print_list_b(blst);
-		scanf("%d", &c);
+		ft_printf("number of movements: %d\nNext commands: ", commands);
+		scanf("%d", &n);
+		
 	}
 	ft_freelist(alst, blst, 0);
 	return (0);
