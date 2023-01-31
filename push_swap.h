@@ -6,7 +6,7 @@
 /*   By: ddantas- <ddantas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 16:19:49 by ddantas-          #+#    #+#             */
-/*   Updated: 2023/01/31 12:18:07 by ddantas-         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:05:21 by ddantas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int			rra(t_ps_list **alst, int rrr);
 int			rrb(t_ps_list **blst, int rrr);
 
 /*		push_swap.c			*/
+int			is_it_sorted(t_ps_list **alst, t_ps_list **blst);
 int			ss(t_ps_list *alst, t_ps_list *blst);
 int			rr(t_ps_list **alst, t_ps_list **blst);
 int			rrr(t_ps_list **alst, t_ps_list **blst);

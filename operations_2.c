@@ -6,7 +6,7 @@
 /*   By: ddantas- <ddantas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:32:24 by ddantas-          #+#    #+#             */
-/*   Updated: 2023/01/31 12:19:20 by ddantas-         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:46:35 by ddantas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int    ra(t_ps_list **alst, int rr)
 	t_ps_list	*temp;
 	int c = 0;
 	if ((*alst) == NULL || (*alst)->next == NULL)
-		return ;
+		return (0);
 	if (rr == 0)
 	{
 		c++;
@@ -59,7 +59,7 @@ int	rra(t_ps_list **alst, int rrr)
 	int c = 0;
 
 	if ((*alst) == NULL || (*alst)->next == NULL)
-		return ;
+		return (0);
 	if (rrr == 0)
 	{
 		c++;
@@ -80,7 +80,7 @@ int	rrb(t_ps_list **blst, int rrr)
 	int c = 0;
 
 	if ((*blst) == NULL || (*blst)->next == NULL)
-		return ;
+		return (0);
 	if (rrr == 0)
 	{
 		c++;

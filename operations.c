@@ -6,7 +6,7 @@
 /*   By: ddantas- <ddantas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 07:40:04 by  ddantas-         #+#    #+#             */
-/*   Updated: 2023/01/31 12:18:13 by ddantas-         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:47:31 by ddantas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int	sa(t_ps_list	*alst, int ss)
 {
 	int		n_temp;
-	int		c = 0;
-
+	int		c;
+	c = 0;
 	if (alst == NULL || alst->next == NULL)
-		return (alst);
+		return (0);
 	if (ss == 0)
 	{
 		c++;
@@ -36,10 +36,10 @@ int	sa(t_ps_list	*alst, int ss)
 int	sb(t_ps_list *blst, int ss)
 {
 	int		n_temp;
-	int		c = 0;
-
+	int		c;
+	c = 0;
 	if (blst == NULL || blst->next == NULL)
-		return (blst);
+		return (0);
 	if (ss == 0)
 	{
 		c++;
