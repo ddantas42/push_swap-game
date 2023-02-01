@@ -6,7 +6,7 @@
 /*   By: ddantas- <ddantas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:32:24 by ddantas-          #+#    #+#             */
-/*   Updated: 2023/01/31 12:46:35 by ddantas-         ###   ########.fr       */
+/*   Updated: 2023/02/01 10:48:32 by ddantas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int    rb(t_ps_list **blst, int rr)
 	int c = 0;
 
 	if ((*blst) == NULL || (*blst)->next == NULL)
-		return ;
+		return (0);
 	if (rr == 0)
 	{
 		c++;

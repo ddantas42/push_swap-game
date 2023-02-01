@@ -6,7 +6,7 @@
 /*   By: ddantas- <ddantas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 07:40:04 by  ddantas-         #+#    #+#             */
-/*   Updated: 2023/01/31 12:47:31 by ddantas-         ###   ########.fr       */
+/*   Updated: 2023/02/01 10:48:15 by ddantas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	pa(t_ps_list **blst, t_ps_list **alst)
 	t_ps_list	*temp;
 
 	if (*blst == NULL)
-		return ;
+		return (0);
 	if (*alst == NULL)
 	{
 		temp = (*blst)->next;
@@ -83,7 +83,7 @@ int	pb(t_ps_list **blst, t_ps_list **alst)
 	t_ps_list	*temp;
 
 	if (*alst == NULL)
-		return ;
+		return (0);
 	if (*blst == NULL)
 	{
 		temp = (*alst)->next;
