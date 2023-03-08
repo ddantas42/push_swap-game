@@ -104,7 +104,7 @@ restart:
 	{
 		system("clear"); ft_printf("1  2  3  4  5  6  7  8   9   10  11      100\npa pb sa sb ss ra rb rr rra rrb rrr    restart\n");
 		if (n == 69)
-			ft_printf("XD LMAO 420 69 LMAOOO\n");
+			ft_printf("....sus....\n");
 		if (n == 1)
 			commands += pa(&blst, &alst);
 		if (n == 2)
